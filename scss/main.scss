@@ -2,6 +2,32 @@
 @import "media-queries"; 
 @import "mixin"; 
 
+
+$blue-color: #1155CC;
+$gray-color: #b7b7b7;
+$gray-bg: #f3f3f3;
+
+.HD2 {
+    @include font600(50px,56px);
+    color: $blue-color;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 30px;
+  
+      @include max-s(768px){
+        font-size: 40px; 
+        line-height: 45px; 
+      }
+  }
+
+.MB-block {
+    margin-bottom: 100px;
+}
+
+section {
+    position: relative;
+}
+
 .Main {
     max-width: 1920px;
     width: 100%;
@@ -12,3 +38,242 @@
     min-height: 100%; 
 
 }
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
+header {
+    background: url('../images/bg1.jpg') center top no-repeat;
+    width: 100%;
+    height: 854px;
+
+   
+}
+
+.header {
+    &-wrap {
+        margin-top: 140px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+
+    }
+    &__img { }
+    &__text {
+        margin-left: 30px;
+    }
+    &__text-title {
+        @include font700(64px,70px);
+        color: $blue-color;
+        margin-bottom: 40px;
+        margin-top: 50px;
+        
+    }
+    &__text-desc {
+        @include font700(32px,35px);
+        color: #000;
+        margin-bottom: 30px;
+    }  
+}
+
+
+.Line-title {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    padding-right: 20px;
+
+    &__bg {
+        background-color: $blue-color;
+        height: 50px;
+        width: 30%;
+        //margin-left: -300px;
+    }
+
+    &__hd {
+        @include font400(20px,50px);
+        text-transform: uppercase;
+        color: $gray-color;
+        line-height: 50px;
+        margin-left: 20px;
+    }
+}
+
+
+.System {
+    padding-top: 150px;
+    background-color: #f3f3f3;
+    padding-bottom: 15px;
+
+    .HD2 {}
+
+    &__desc {
+        @include font600(25px,30px);
+        color: #000;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__list {padding-right: 20px;}
+
+    &__list-item {
+        @include font400(20px,30px);
+        color: #000;
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+
+        &::before {
+            content:' ';
+            display:block;
+
+            background: $blue-color;
+            flex: 0 0 5px;
+            height: auto;
+            margin-right: 50px;
+        }
+    }
+}
+
+.Getting {
+    padding-top: 150px;
+}
+.Getting-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.Getting-item {
+    position: relative;
+    width: 335px;
+    margin: 0 10px 50px;
+    padding-left: 5px;
+    background: $gray-bg;
+
+
+    &::before {
+        content:' ';
+        display:block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background: $blue-color;
+    }
+
+    
+    &__img {margin-bottom: 15px;}
+    &__hd {
+        @include font400(23px,30px);
+        color: #000;
+        text-align: center;
+        padding: 0 10px 25px;
+        
+    }
+}
+
+.Module {
+    padding-top: 150px;
+
+}
+
+.Module-Table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.Module-item {
+    width: 24.8%;
+    background: $blue-color;
+    margin: 1px;
+    text-align: center;
+    padding: 15px ;
+
+    &__icon {
+        margin-bottom: 20px;
+    }
+    &__title {
+        @include font400(23px,30px);
+        color: #fff;
+    }
+}
+
+
+.Razdel {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+
+    &__left {
+        width: 285px;
+        background: $gray-bg;
+
+        .Module-item {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__item {
+        @include font400(20px,30px);
+        color: #000;
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+
+        &::before {
+            content:' ';
+            display:block;
+            background: $blue-color;
+            flex: 0 0 5px;
+            height: auto;
+            margin-right: 20px;
+        }
+    }
+
+    &__img {
+        flex: 1 1 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
