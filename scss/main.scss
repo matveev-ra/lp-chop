@@ -257,9 +257,69 @@ header {
 
 
 
+.Development {
+    position: relative;
+}
+
+.Block-in1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+
+    .Kub1 {
+        background: $blue-color;
+        width: 30%;
+        height: 628px;
+    }
+
+    .Kub2 {
+        background: $gray-bg;
+        width: 600px;
+        height: 535px;
+
+    }
+
+}
 
 
+.Block-in2 {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
 
+.Development-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 113px;
+
+    &__text {
+        margin-left: 30px;
+
+        .desc {
+            @include font600(30px,40px);
+            color: #000;
+            margin-bottom: 20px;
+
+            a[href^="tel:"] {
+                color: #000;
+
+                &:hover {
+                    color: $blue-color;
+                    text-decoration: underline;
+
+                }
+            } 
+        }
+        .desc2{
+            @include font400(20px,30px);
+            color: #000;
+        }
+    }
+}
 
 
 

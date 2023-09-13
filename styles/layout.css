@@ -294,6 +294,83 @@ header {
   flex: 1 1 auto;
 }
 
+.Development {
+  position: relative;
+}
+
+.Block-in1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Block-in1 .Kub1 {
+  background: #1155CC;
+  width: 30%;
+  height: 628px;
+}
+
+.Block-in1 .Kub2 {
+  background: #f3f3f3;
+  width: 600px;
+  height: 535px;
+}
+
+.Block-in2 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.Development-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-top: 113px;
+}
+
+.Development-info__text {
+  margin-left: 30px;
+}
+
+.Development-info__text .desc {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.Development-info__text .desc a[href^="tel:"] {
+  color: #000;
+}
+
+.Development-info__text .desc a[href^="tel:"]:hover {
+  color: #1155CC;
+  text-decoration: underline;
+}
+
+.Development-info__text .desc2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 768px) {
