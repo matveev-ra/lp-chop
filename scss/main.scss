@@ -2,14 +2,12 @@
 @import "media-queries"; 
 @import "mixin"; 
 
-
-$blue-color: #1155CC;
-$gray-color: #b7b7b7;
-$gray-bg: #f3f3f3;
+$main-bg :#293440;
+ 
 
 .HD2 {
     @include font600(50px,56px);
-    color: $blue-color;
+    color: #fff;
     text-transform: uppercase;
     text-align: center;
     padding-bottom: 30px;
@@ -19,7 +17,7 @@ $gray-bg: #f3f3f3;
         line-height: 45px; 
       }
   }
-
+ 
 .MB-block {
     margin-bottom: 100px;
 }
@@ -32,7 +30,6 @@ section {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100%; 
@@ -68,7 +65,7 @@ header {
     }
     &__text-title {
         @include font700(64px,70px);
-        color: $blue-color;
+        color: #fff;
         margin-bottom: 40px;
         margin-top: 50px;
         
@@ -80,246 +77,6 @@ header {
     }  
 }
 
-
-.Line-title {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-    padding-right: 20px;
-
-    &__bg {
-        background-color: $blue-color;
-        height: 50px;
-        width: 30%;
-        //margin-left: -300px;
-    }
-
-    &__hd {
-        @include font400(20px,50px);
-        text-transform: uppercase;
-        color: $gray-color;
-        line-height: 50px;
-        margin-left: 20px;
-    }
-}
-
-
-.System {
-    padding-top: 150px;
-    background-color: #f3f3f3;
-    padding-bottom: 15px;
-
-    .HD2 {}
-
-    &__desc {
-        @include font600(25px,30px);
-        color: #000;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    &__list {padding-right: 20px;}
-
-    &__list-item {
-        @include font400(20px,30px);
-        color: #000;
-        margin-bottom: 20px;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: start;
-
-        &::before {
-            content:' ';
-            display:block;
-
-            background: $blue-color;
-            flex: 0 0 5px;
-            height: auto;
-            margin-right: 50px;
-        }
-    }
-}
-
-.Getting {
-    padding-top: 150px;
-}
-.Getting-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 -10px;
-}
-
-.Getting-item {
-    position: relative;
-    width: 335px;
-    margin: 0 10px 50px;
-    padding-left: 5px;
-    background: $gray-bg;
-
-
-    &::before {
-        content:' ';
-        display:block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 5px;
-        background: $blue-color;
-    }
-
-    
-    &__img {margin-bottom: 15px;}
-    &__hd {
-        @include font400(23px,30px);
-        color: #000;
-        text-align: center;
-        padding: 0 10px 25px;
-        
-    }
-}
-
-.Module {
-    padding-top: 150px;
-
-}
-
-.Module-Table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-
-.Module-item {
-    width: 24.8%;
-    background: $blue-color;
-    margin: 1px;
-    text-align: center;
-    padding: 15px ;
-
-    &__icon {
-        margin-bottom: 20px;
-    }
-    &__title {
-        @include font400(23px,30px);
-        color: #fff;
-    }
-}
-
-
-.Razdel {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-
-
-    &__left {
-        width: 285px;
-        background: $gray-bg;
-
-        .Module-item {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-    }
-
-    &__item {
-        @include font400(20px,30px);
-        color: #000;
-        margin-bottom: 20px;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: start;
-
-        &::before {
-            content:' ';
-            display:block;
-            background: $blue-color;
-            flex: 0 0 5px;
-            height: auto;
-            margin-right: 20px;
-        }
-    }
-
-    &__img {
-        flex: 1 1 auto;
-    }
-}
-
-
-
-.Development {
-    position: relative;
-}
-
-.Block-in1 {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-    align-items: center;
-
-    .Kub1 {
-        background: $blue-color;
-        width: 30%;
-        height: 628px;
-    }
-
-    .Kub2 {
-        background: $gray-bg;
-        width: 600px;
-        height: 535px;
-
-    }
-
-}
-
-
-.Block-in2 {
-    position: absolute;
-    width: 100%;
-    top: 0;
-}
-
-.Development-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    margin-top: 113px;
-
-    &__text {
-        margin-left: 30px;
-
-        .desc {
-            @include font600(30px,40px);
-            color: #000;
-            margin-bottom: 20px;
-
-            a[href^="tel:"] {
-                color: #000;
-
-                &:hover {
-                    color: $blue-color;
-                    text-decoration: underline;
-
-                }
-            } 
-        }
-        .desc2{
-            @include font400(20px,30px);
-            color: #000;
-        }
-    }
-}
 
 
 
