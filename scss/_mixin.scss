@@ -1,3 +1,8 @@
+@mixin fontU($fw,$fz,$lh) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
 @mixin fontN($fz,$lh) {
   font-weight: normal;
   font-size: $fz;
@@ -29,7 +34,9 @@
   line-height: $lh;
 }
 
-
+@mixin container-width() {
+  max-width: 1270px;
+}
 
 // .flexC {
 //   display: -webkit-box;

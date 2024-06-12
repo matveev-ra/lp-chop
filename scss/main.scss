@@ -2,8 +2,17 @@
 @import "media-queries"; 
 @import "mixin"; 
 
-$main-bg :#293440;
+$main-bg :#333841;
+$color-black:#293440;
+$color-orange:#E5D092;
+$color-orange2:#FFC86B;
+$сolor-black25: rgba(0,0,0, 0.25);
+
  
+ 
+html {
+    background: $main-bg;
+}
 
 .HD2 {
     @include font600(50px,56px);
@@ -27,62 +36,357 @@ section {
 }
 
 .Main {
-    max-width: 1920px;
+    max-width: 2050px;
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     min-height: 100%; 
-
+   
 }
 .container {
-    max-width: 1200px;
+    @include container-width();
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 
 }
 
-header {
-    background: url('../images/bg1.jpg') center top no-repeat;
-    width: 100%;
-    height: 854px;
-
-   
-}
-
-.header {
-    &-wrap {
-        margin-top: 140px;
+.top-bar {
+    background: $color-black;
+    box-shadow: 0 4px 4px #E5D092;
+    position: relative;
+    z-index: 2;
+    
+    
+    &__wrap {
+        height: 75px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
+.fixed {
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
+.logo {
+    width: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+}
+.menutop {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    $this: &; //создаем переменную в селекторе
+
+    @at-root // отменяет вложеность
+    a#{$this}__link {
+        @include fontU(500,20px,22px);
+        color: #fff; 
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+          }
     }
-    &__img { }
-    &__text {
-        margin-left: 30px;
+}
+
+.telephone {
+    @include fontU(600,24px,28px);
+    color: $color-orange;
+    
+    a:hover {
+        text-decoration: underline;
+        cursor: pointer;
     }
-    &__text-title {
-        @include font700(64px,70px);
-        color: #fff;
-        margin-bottom: 40px;
-        margin-top: 50px;
-        
-    }
-    &__text-desc {
-        @include font700(32px,35px);
-        color: #000;
-        margin-bottom: 30px;
-    }  
 }
 
 
 
+.header {
+    background: url('../images/bg-header.jpg') center top no-repeat;
+    width: 100%;
+    height: 706px;
+    margin-bottom: 78px;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1; 
+
+        @include max-s(992px){
+            background-size: cover;
+            height: auto;
+            margin-bottom: 50px;
+        }
+
+    &-wrap {
+        display: flex;
+        position: relative;
+        margin-top: 140px;
+        align-items: center;
+
+            @include max-s(992px){
+                flex-wrap: wrap; 
+                margin-top: 70px;
+            }
+    }
+    
+    &__text {
+        display: flex;
+        flex: 0 0 100%;
+
+    
+        &-wrap{
+            display: flex;
+            @include container-width();
+            width: 100%;
+            margin: 0 auto;
+            // align-items: center;
+        } 
+        
+        &-content {
+            width: 51%;
+
+                @include max-s(992px){
+                    width: 100%;
+                }
+        }
+        &-title {
+            font-family: "Russo One", sans-serif;
+            font-weight: normal;
+            // font-size: 75px;
+            font-size: clamp(40px, 5vw, 74px);
+            line-height: 1.2;
+            color: $color-orange2;
+            // margin-bottom: 66px;
+            margin-bottom: 8%;
+
+                @include max-s(992px){
+                    text-align: center;
+                }
 
 
+        }
 
+        &-desc {
+            width: 90%;
+            @include fontU(500, 20px, 24px);
+            // font-size: clamp(14px, 2.5vw, 20px);
+            font-size: clamp(14px, calc(16px + 8 * ((100vw - 320px) / 960)), 20px);
+            color: #fff;
+            margin-bottom: 30px;
 
+                @include max-s(992px){
+                    text-align: center;
+                    width: 100%;
+                }
+        }
+    }
+   
+    
+    &__img {
+        display: flex;
+        position: relative;
+        flex: 0 0 48%;
+        transform: translate(-100%, 0px);
+        font-size: 0;
+
+        @include max-s(992px){
+            flex: 0 0 100%;
+            transform: translate(0%, 0px);
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+}
+
+.box-bg {
+    background: $color-black;
+    box-shadow: 0 4px 4px $сolor-black25;
+    border-radius: 10px;
+}
+
+.Box {
+    padding: 0 15px;
+    margin-bottom: 150px;
+    
+    @include max-s(992px)  {
+        margin-bottom: 50px;
+    }
+
+    &-wrap {
+        display: flex;
+        position: relative;
+        align-items: center;
+        
+            @include max-s(992px){
+                background: $color-black;
+                box-shadow: 0 4px 4px $сolor-black25;
+                border-radius: 10px;
+                flex-wrap: wrap;
+                padding: 20px;
+
+            }
+    }
+
+    &__info {
+        display: flex;
+        flex: 0 0 100%;
+
+        &-wrap {
+            @include container-width();
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            padding: 60px 80px 80px 80px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            position: relative;
+            background: $color-black;
+            box-shadow: 0 4px 4px $сolor-black25;
+            border-radius: 10px;
+
+                @include max-s(992px){
+                    padding: 0px;
+                    background: none;
+                    box-shadow: none;
+
+                }
+           
+        }
+        
+        &-content {
+            flex:0 0 55%;
+
+            @include max-s(992px){
+                flex:0 0 100%;
+                text-align: center;
+            }
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: clamp(28px, 5vw, 44px);
+            line-height: 1.2;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            @include fontU(400,20px,22px);
+            font-size: clamp(12px, 5vw, 20px);
+            color: #F1CE93;
+            @include max-s(992px){
+                margin-bottom: 20px;
+            }
+        }
+    } 
+    
+
+    &__img {
+        display: flex;
+        position: relative;
+        flex: 0 0 43%;
+        transform: translate(-100%, 0px);
+        font-size: 0;
+        margin: -100px 0 -120px;
+        z-index: 2;
+        
+            @include max-s(992px){
+                transform: translate(0%, 0px);
+                flex: 0 0 100%;
+                margin: 0; 
+                display: flex;
+                justify-content: center;
+            }
+        
+        img {
+            @include max-s(992px)  {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.BoxRight .Box__info-title, .BoxRight .Box__info-text {
+    text-align: right;
+
+        @include max-s(992px)  {
+            text-align: center;
+        }
+
+}
+.BoxRight .Box__img {
+    flex: 0 0 45%;
+    transform: translate(0%, 0px);
+    justify-content: flex-end;
+    order: 1;
+
+        @include max-s(992px)  {
+            flex: 0 0 100%;
+            justify-content: center;
+        }
+}
+.BoxRight .Box__info {
+    transform: translate(-45%, 0px);
+    order: 2;
+
+    @include max-s(992px){
+        order: 1;
+        transform: translate(0%, 0px);
+    }
+}
+.BoxRight .Box__info-wrap {
+    justify-content: flex-end;
+}
+.BoxRight .Box__info-content {
+    flex: 0 0 52%;
+
+    @include max-s(992px){
+        flex: 0 0 100%;
+    }
+}
+
+footer {
+    background: $color-black;
+    
+}
+.Foot-in {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+
+    &__info {
+        @include fontU(600,28px,30px);
+        color: #545F71;
+    }
+    &__year {
+        @include fontU(600,24px,26px);
+        color: #545F71;
+    }
+}
 
 
 
