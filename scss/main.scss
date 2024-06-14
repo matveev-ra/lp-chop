@@ -109,6 +109,7 @@ section {
 
 .telephone {
     @include fontU(600,24px,28px);
+    font-size: clamp(16px, 5vw, 24px);
     color: $color-orange;
     
     a:hover {
