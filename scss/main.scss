@@ -377,7 +377,7 @@ section {
 
 footer {
     background: $color-black;
-    
+   
 }
 
 .Foot-in {}
@@ -431,6 +431,10 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 70px;
+    background: $color-black;
+    position: relative;
+    z-index: 10;
+    
 
     @include max-s(560px){
         text-align: center;

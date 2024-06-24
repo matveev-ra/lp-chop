@@ -382,6 +382,9 @@ footer {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 10px 70px;
+  background: #293440;
+  position: relative;
+  z-index: 10;
 }
 
 .Foot-bottom__tel {
