@@ -12,7 +12,8 @@
   <meta name="yandex-verification" content="218d168f7221d1c6" />
 	<link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles/layout.css" type="text/css"/>
-	<script src="js/jquery-1.9.0.min.js"></script>
+  <link rel="stylesheet" href="styles/slick.css" type="text/css"/>
+  <link rel="stylesheet" href="styles/fancybox.css" type="text/css"/>
 
 <!-- Yandex.Metrika counter --> 
 <script type="text/javascript" > 
@@ -182,6 +183,135 @@
       </div>
     </div>
 
+    <style>
+      /* Set aspect ratio for video container */
+      /* .fancybox-container {
+          max-width: 90%;
+          max-height: 90%;
+      }
+      .fancybox__content {
+          position: relative;
+          width: 56.25% !important; /* 16:9 aspect ratio (height / width) */
+          padding-top: 177.78% !important; /* 9:16 aspect ratio (width / height) */
+      }
+      .fancybox__content video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+      } */
+  </style>
+  <div id="section7" class="Reviews">
+    <div class="Block-content Reviews-in">
+      <div class="Box-title Box-title--center">Отзывы</div>
+      <div class="Slider-reviews">
+        <div class="review-item">
+          <a href="video/review-05.mp4" class="play" data-fancybox="video-gallery" data-caption="Зуйкин Алексей, Генеральный директор, ЧОО &laquo;Варк&raquo;" 
+          data-width="520" data-height="920">
+            <img src="video/rev-05.jpg" alt="Видео отзыв">
+          </a>
+          <div class="review-title">
+            Зуйкин Алексей,<br/> Генеральный директор, ЧОО "Варк"
+          </div>
+        </div>
+        <div class="review-item">
+          <a href="video/review-06.mp4" class="play" data-fancybox="video-gallery" data-caption="Евгений Кулаков, Руководитель направления &laquo;АКМ-Групп&raquo;" 
+          data-width="520" data-height="920">
+            <img src="video/rev-06.jpg" alt="Видео отзыв">
+          </a>
+          <div class="review-title">
+            Евгений Кулаков,<br/>Руководитель направления "АКМ-Групп"
+          </div>
+        </div>
+        <div class="review-item">
+          <a href="video/review-01.mp4" class="play" data-fancybox="video-gallery" data-caption="Ворожейкин Владимир, Начальник охраны, ЧОП &laquo;Спец-Групп&raquo;" 
+          data-width="520" data-height="920"> 
+            <img src="video/rev-01.jpg" alt="Видео отзыв">
+          </a>
+          <div class="review-title">
+            Ворожейкин Владимир, <br/>  Начальник охраны, ЧОП "Спец-Групп" 
+          </div>
+
+        </div>
+        <div class="review-item">
+          <a href="video/review-02.mp4" class="play" data-fancybox="video-gallery" data-caption="Ушакова Марина, Бухгалтер, ЧОП &laquo;Логос&raquo;" 
+          data-width="520" data-height="920">
+            <img src="video/rev-02.jpg" alt="Видео отзыв">
+          </a>
+          <div class="review-title">
+            Ушакова Марина,<br/> Бухгалтер, ЧОП "Логос"
+          </div>
+        </div>
+        <div class="review-item">
+          <a href="video/review-03.mp4" class="play" data-fancybox="video-gallery" data-caption="Буянова Наталья, Бухгалтер, ЧОО &laquo;Старк-Групп&raquo;" 
+          data-width="520" data-height="920">
+            <img src="video/rev-03.jpg" alt="Видео отзыв">
+          </a>
+          <div class="review-title">
+            Буянова Наталья,<br/> Бухгалтер, ЧОО "Старк-Групп"
+          </div>
+        </div>
+        <div class="review-item">
+          <a href="video/review-04.mp4" class="play" data-fancybox="video-gallery" data-caption="Чигрин Алексей, Начальник охраны, ЧОП &laquo;Щит&raquo;" 
+          data-width="520" data-height="920">
+            <img src="video/rev-04.jpg" alt="Видео отзыв">
+          </a>
+          <div class="review-title">
+            Чигрин Алексей,<br/> Начальник охраны, ЧОП "Щит"
+          </div>
+        </div>
+     
+
+
+
+        <!-- <div class="review-item">
+          <a href="https://www.youtube.com/watch?v=FBTgQjDu_fI" class="play" data-fancybox="video-gallery">
+            <img src="https://img.youtube.com/vi/FBTgQjDu_fI/hqdefault.jpg" alt="Видео отзыв 1">
+          </a>
+          <div class="review-title">
+            Ворожейкин Владимир, <br/>  Начальник охраны, ЧОП "Спец-Групп" 
+          </div>
+
+        </div>
+        <div class="review-item">
+          <a href="https://www.youtube.com/watch?v=b0pE_b3ZYfI" class="play" data-fancybox="video-gallery">
+            <img src="https://img.youtube.com/vi/b0pE_b3ZYfI/hqdefault.jpg" alt="Видео отзыв 2">
+          </a>
+          <div class="review-title">
+            Ушакова Марина,<br/> Бухгалтер, ЧОП "Логос"
+          </div>
+        </div>
+        <div class="review-item">
+          <a href="https://www.youtube.com/watch?v=6-kodQ3A84E" class="play" data-fancybox="video-gallery">
+            <img src="https://img.youtube.com/vi/6-kodQ3A84E/hqdefault.jpg" alt="Видео отзыв 3">
+          </a>
+          <div class="review-title">
+            Буянова Наталья,<br/> Бухгалтер, ЧОО "Старк-Групп"
+          </div>
+        </div>
+        <div class="review-item">
+          <a href="https://www.youtube.com/watch?v=Jsss7QxtZp8" class="play" data-fancybox="video-gallery">
+            <img src="https://img.youtube.com/vi/Jsss7QxtZp8/hqdefault.jpg" alt="Видео отзыв 4">
+          </a>
+          <div class="review-title">
+            Чигрин Алексей,<br/> Начальник охраны, ЧОП "Щит"
+          </div>
+        </div>
+        <div class="review-item">
+          <a href="https://www.youtube.com/watch?v=BlTiVDhlV4Q" class="play" data-fancybox="video-gallery">
+            <img src="https://img.youtube.com/vi/BlTiVDhlV4Q/hqdefault.jpg" alt="Видео отзыв 5">
+          </a>
+          <div class="review-title">
+            Зуйкин Алексей,<br/> Генеральный директор, ЧОП "Варк"
+          </div>
+        </div> -->
+      </div>
+    </div>
+    
+  </div>
+
+
     <footer>
       <div class="Foot-in container">
 
@@ -229,10 +359,46 @@
   <!--/Main -->
 
 <script src="js/jquery-1.9.0.min.js"></script>
-
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/fancybox.umd.js"></script>
 
 <script>
+Fancybox.bind('[data-fancybox]', {
+        // Custom options
+        
+      });   
+
+
 $(document).ready(function () {
+
+  $('.Slider-reviews').slick({
+     infinite: false,
+     slidesToShow: 3,
+     slidesToScroll: 1,
+     adaptiveHeight: true,
+     dots: true,
+     responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        dots: true,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 540,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+      }
+    }
+   // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+  });
+
 
   $(window).scroll(function(){
 		var wScrTop =  $(window).scrollTop()
@@ -248,18 +414,18 @@ $(document).ready(function () {
   
   
   $(".menutop a[href^='#']").click(function(e){
-  e.preventDefault();
-  var id = $(this).attr('href'), // забираем идентификатор блока с атрибута href
-      target = $(id), // находим целевой элемент
-      windowHeight = $(window).height(), // высота окна браузера
-      elementHeight = target.outerHeight(), // высота целевого элемента
-      scrollPosition = target.offset().top - ((windowHeight / 2) - (elementHeight / 2)); // вычисляем позицию прокрутки
+    e.preventDefault();
+    var id = $(this).attr('href'), // забираем идентификатор блока с атрибута href
+        target = $(id), // находим целевой элемент
+        windowHeight = $(window).height(), // высота окна браузера
+        elementHeight = target.outerHeight(), // высота целевого элемента
+        scrollPosition = target.offset().top - ((windowHeight / 2) - (elementHeight / 2)); // вычисляем позицию прокрутки
 
-  $("html, body").animate({scrollTop: scrollPosition}, 400);
-});
+    $("html, body").animate({scrollTop: scrollPosition}, 400);
+    
+  });
 
-
-
+   
 
 
 });

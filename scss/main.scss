@@ -327,7 +327,9 @@ section {
     color: #fff;
     margin-bottom: 30px;
 }
-
+.Box-title--center {
+    text-align: center;
+}
 .Box-text {
     @include fontU(400,20px,24px);
     font-size: clamp(12px, 5vw, 20px);
@@ -375,6 +377,26 @@ section {
     @include max-s(992px){
         flex: 0 0 100%;
     }
+}
+
+
+.Block-content {
+    @include container-width();
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 80px 80px 80px;
+    // display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: space-between;
+    position: relative;
+    background: $color-black;
+    box-shadow: 0 4px 4px $сolor-black25;
+    border-radius: 10px;
+
+        @include max-s(992px){
+            padding: 20px;
+        }
+
 }
 
 .pb40 {
@@ -506,7 +528,49 @@ footer {
   }
 
 
+.Reviews {
+    margin-bottom: 100px;
+    padding: 0 15px;
+}
 
+.Slider-reviews {
+    width: 90%;
+    margin: 0 auto; 
 
-
-
+    @include max-s(768px){
+      width: 100%; 
+    }
+}
+.review-item {
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.review-item  a.play{
+    position: relative;
+    margin-bottom: 20px;
+}
+.review-item  a.play::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    // margin-top: -32px;
+    // margin-left: -32px;
+    transition: transform 0.3s ease; 
+    background: url('../images/videopng.png') center top no-repeat; 
+    background-size: contain;
+}
+.review-item  a.play:hover::before {
+    transform: scale(1.2);
+}
+.review-title {
+    text-align: center;
+    @include fontU(400,16px,18px);
+    color: #fff;
+}

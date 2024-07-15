@@ -306,6 +306,10 @@ a.menutop__link:hover {
   margin-bottom: 30px;
 }
 
+.Box-title--center {
+  text-align: center;
+}
+
 .Box-text {
   font-weight: 400;
   font-size: 20px;
@@ -348,6 +352,18 @@ a.menutop__link:hover {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 52%;
   flex: 0 0 52%;
+}
+
+.Block-content {
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 80px 80px 80px;
+  position: relative;
+  background: #293440;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
 .pb40 {
@@ -448,6 +464,66 @@ video {
   width: 100%;
   height: auto;
   max-height: 100%;
+}
+
+.Reviews {
+  margin-bottom: 100px;
+  padding: 0 15px;
+}
+
+.Slider-reviews {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.review-item {
+  position: relative;
+  padding: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.review-item a.play {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.review-item a.play::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  background: url("../images/videopng.png") center top no-repeat;
+  background-size: contain;
+}
+
+.review-item a.play:hover::before {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.review-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -567,6 +643,10 @@ video {
     flex: 0 0 100%;
   }
 
+  .Block-content {
+    padding: 20px;
+  }
+
   .Foot-top {
     text-align: center;
   }
@@ -591,6 +671,10 @@ video {
   .HD2 {
     font-size: 40px;
     line-height: 45px;
+  }
+
+  .Slider-reviews {
+    width: 100%;
   }
 }
 
