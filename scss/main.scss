@@ -458,6 +458,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 70px;
     background: $color-black;
     position: relative;
@@ -466,13 +467,17 @@ footer {
 
     @include max-s(560px){
         text-align: center;
-      }
+        padding: 10px;
+    }
 
     &__tel {
-        width: 50%;
+        // width: 50%;
+        @include fontU(500,20px,22px);
+        color: #fff;
+        
             @include max-s(560px){
-              width: 100%; 
-              margin-bottom: 20px;
+                width: 100%; 
+                margin-bottom: 20px;
             }
 
         a {
@@ -480,6 +485,18 @@ footer {
             color: #fff;
             &:hover {
                 text-decoration: underline;
+            }
+        }
+
+        span {
+            @include max-s(700px){
+              display: block; 
+            }
+
+            &:not(:last-child){
+                @include max-s(700px){
+                    margin-bottom: 5px;
+                  }
             }
         }
     }

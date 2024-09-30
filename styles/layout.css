@@ -407,6 +407,9 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 10px 70px;
   background: #293440;
   position: relative;
@@ -414,7 +417,10 @@ footer {
 }
 
 .Foot-bottom__tel {
-  width: 50%;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #fff;
 }
 
 .Foot-bottom__tel a {
@@ -678,9 +684,20 @@ video {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .Foot-bottom__tel span {
+    display: block;
+  }
+
+  .Foot-bottom__tel span:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   .Foot-bottom {
     text-align: center;
+    padding: 10px;
   }
 
   .Foot-bottom__tel {
