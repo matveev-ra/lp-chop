@@ -38,6 +38,21 @@
   max-width: 1270px;
 }
 
+@mixin HD2() {
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+@mixin textP() {
+  @include fontU(400,20px,27px);
+  line-height: clamp(21px, 3vw, 27px);
+  font-size: clamp(16px, 3vw, 20px);
+  color: #F1CE93;
+}
+
 // .flexC {
 //   display: -webkit-box;
 //   display: -ms-flexbox;
